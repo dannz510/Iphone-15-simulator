@@ -242,7 +242,7 @@ $(function(){
     draggScreen: false
   }
   //Extended Functions
- $.fn.extend({
+$.fn.extend({
   touchMov: function(config){
     config = jQuery.extend({
       mov: 'x',
@@ -276,11 +276,11 @@ $(function(){
 
     function handleEnd(e) {
       if (config.mov === 'x') {
-        if (Math.abs(movCoords.x - downCoords.x) > 30) { // Change this value to adjust the sensitivity of the swipe
+        if (movCoords.x - downCoords.x != 0) {
           (movCoords.x - initCoords.x) > 0 ? config.movRight(e) : config.movLeft(e);
         }
       } else if (config.mov === 'y') {
-        if (Math.abs(movCoords.y - downCoords.y) > 30) { // Change this value to adjust the sensitivity of the swipe
+        if (movCoords.y - downCoords.y != 0) {
           (movCoords.y - initCoords.y) > 0 ? config.movDown(e) : config.movUp(e);
         }
       }
