@@ -193,7 +193,7 @@ $(function(){
       },
       {
         name: 'Minigame',
-        icon: '../Icons/Game.png',
+        icon: '../Icons/game.png',
         notifications: 0,
         type: 'app',
         dynamic: false
