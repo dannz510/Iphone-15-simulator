@@ -1,0 +1,235 @@
+/* import apple fonts */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+@font-face {
+  font-family: "San Francisco Bold";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+/*all elements have a margin of 0  */
+* {
+  margin: 0;
+}
+/* Set body */
+body {
+  font-family: "San Francisco";
+  color: white;
+}
+
+/*Set wrapper  */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper > * {
+  padding: 20px;
+}
+
+/*Create header  */
+.page-header {
+  background: #ffffff;
+
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Create the main part of the page */
+.page-main {
+  flex-grow: 1;
+  background: #ffffff;
+}
+
+/* Create the iphone title */
+.title {
+  font-size: 19vh;
+  text-align: center;
+  position: absolute;
+
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+}
+
+/* Create the first section of the main page */
+.absoluteContainer {
+  height: calc(100vh - 100px);
+  z-index: 1;
+  flex-grow: 1;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  padding-top: 280px;
+  background-image: url("https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg");
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* make the blue button */
+.button {
+  background-color: #0071e3;
+  border: none;
+  color: white;
+  padding: 3vh;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3.5vh;
+  text-align: center;
+  position: absolute;
+
+  top: 78vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+}
+
+.button1 {
+  border-radius: 30px;
+}
+
+/* create the second section of the body */
+.section2 {
+  flex-grow: 1;
+  overflow: hidden;
+
+  height: calc(160vh - 100px);
+  z-index: 1;
+  position: relative;
+}
+/* create the footer */
+.page-footer {
+  background: #282727;
+  z-index: 99999;
+}
+
+/*MenuIcon scc bars*/
+.MenuIcon {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  margin: 5px 0;
+}
+/*Container for MenuIcon*/
+.container {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+}
+/* create the image of the iphone */
+.pictureImage img {
+  max-width: 120%;
+  max-height: auto;
+  padding-top: 60vh;
+}
+
+/* create text */
+.text2 {
+  font-family: "San Francisco Bold";
+  color: black;
+  font-size: 12vh;
+  text-align: left;
+  position: absolute;
+
+  left: 2%;
+  top: 0.2%;
+
+  z-index: 2;
+}
+/* Create an animation for the page */
+.page-main {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+/* keyframes for the animation */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* create the third section of the page */
+.section3 {
+  flex-grow: 1;
+  overflow: hidden;
+  background: #000000;
+  height: calc(160vh - 100px);
+  z-index: 1;
+  position: relative;
+}
+/* set the video */
+.video1 {
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right: 30vw;
+  top: 2vh;
+}
+/* create the button for the menu */
+.MenuButtons {
+  background-color: #ffffff;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  position: relative;
+  margin: auto;
+  width: 100px;
+  height: 40px;
+  border: none;
+  text-align: middle;
+  outline: none;
+  font-size: 15px;
+  float: top;
+}
+
+.active,
+.MenuButtons: hover {
+  background-color: white;
+}
+/*set content of menu  */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  font-family: "San Francisco";
+  font-size: 20px;
+}
+/*set the fake menu buttons  */
+.FakeMenuButtons {
+  background-color: #ffffff;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  padding: 15px;
+  margin: auto;
+  width: text.length;
+  height: 40px;
+  border: none;
+  text-align: middle;
+  outline: none;
+  font-size: 12px;
+  float: top;
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Reverse Engineering for WhatsApp Web</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="main-grid">  
+  <aside class="main-side">
+     <header class="common-header">
+       <div class="common-header-start">
+           <button class="u-flex js-user-nav">
+             <img class="profile-image" src="https://assets.codepen.io/10688215/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1691419794&width=512" alt="Dannz_Js">
+             <div class="common-header-content">
+                <h1 class="common-header-title">Dannz_Js</h1>
+            </div>
+           </button>       
+       </div>
+       <nav class="common-nav">
+           <ul class="common-nav-list">
+             <li class="common-nav-item">
+               <button class="common-button">
+                 <span class="icon">🕘</span>
+               </button>
+             </li>
+             <li class="common-nav-item">
+               <button class="common-button">
+                 <span class="icon icon-status">💬</span>
+               </button>
+             </li>
+             <li class="common-nav-item">
+               <button class="common-button">
+                 <span class="icon icon-menu" aria-label="menu"></span>
+               </button>
+             </li>
+           </ul>
+         </nav>
+     </header>
+    <section class="common-alerts"><!-- optional alert message --></section>
+    <section class="common-search">
+        <input type="search" class="text-input" placeholder="Search or start new chat">
+    </section>
+    <section class="chats">
+      <ul class="chats-list">
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.fhfa1-2.fna.fbcdn.net/v/t1.0-1/p100x100/10325799_276849335820343_269039155920934591_n.png?_nc_cat=101&_nc_sid=dbb9e7&_nc_ohc=fxci6qYcSvoAX-bZfj2&_nc_ht=scontent.fhfa1-2.fna&oh=ad1c246e7e4a52c607aafd99ed7217a2&oe=5EEAF8B0" alt="Elad Shechter">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">CSS Masters Israel</h3>
+              <time class="chats-item-time">12:30</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Beside it yo can follow my twitter account: @eladsc</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://pbs.twimg.com/profile_images/507217425/rachelbyserge_400x400.jpg" alt="Rachel Bratt Tannenbaum">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Rachel Bratt Tannenbaum</h3>
+              <time class="chats-item-time">12:05</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">When is our next meetup?</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages">1</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.fhfa1-2.fna.fbcdn.net/v/t1.0-1/p240x240/67203290_10217514133916884_6721473094952681472_o.jpg?_nc_cat=100&_nc_sid=7206a8&_nc_ohc=re-hfG5q_CoAX-R1IpO&_nc_ht=scontent.fhfa1-2.fna&_nc_tp=6&oh=3596c17bfc18e539e8d604b2d106ac51&oe=5EE7B77C" alt="Yanai Edri">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Yanai Edri</h3>
+              <time class="chats-item-time">12:05</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">See you at Yerucham!</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://pbs.twimg.com/profile_images/1117382038238240769/v3zkFNFa_400x400.png" alt="Rotem Lurx Horovitz">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Rotem Lurx Horovitz</h3>
+              <time class="chats-item-time">11:57</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Let's create a juniors meetup</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages">3</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="http://bit.ly/2HMqGR7" alt="Yehuda Avrashi">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Yehuda Avrashi</h3>
+              <time class="chats-item-time">11:48</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">It was a great plesure for me</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages">1</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="http://bit.ly/2vVhJCm" alt="Itai Segal">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Itai Segal</h3>
+              <time class="chats-item-time">Yesterday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">The is very nice!</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li> 
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.fhfa1-2.fna.fbcdn.net/v/t1.0-9/88098818_10219217642444816_3909333207673208832_o.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=ehj_VHsfD1IAX_Y9ift&_nc_ht=scontent.fhfa1-2.fna&oh=a7b2660b2b9fe517667e9f4b545f2e75&oe=5EEAE76E" alt="Ronen Mars Bahteev">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Ronen Mars Bahteev</h3>
+              <time class="chats-item-time">Yesterday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Let's do a meetup at Bigpanda</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li> 
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.0-1/p480x480/68945154_10157466813344784_6338834733429948416_n.jpg?_nc_cat=103&_nc_sid=7206a8&_nc_ohc=cNR0r4cFIgUAX8zz3be&_nc_ht=scontent.fhfa1-1.fna&_nc_tp=6&oh=4a5d70abaca1964b02be832d4cfe9608&oe=5EE8A96C" alt="Alon Gruss">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Alon Gruss</h3>
+              <time class="chats-item-time">Yesterday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Great!</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li> 
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="http://bit.ly/37UWsGt" alt="Kalo Avi">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Kalo Avi</h3>
+              <time class="chats-item-time">Yesterday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">I have an idea for you</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.ftlv1-2.fna.fbcdn.net/v/t1.0-9/64559952_10157202999688965_7161203821085982720_n.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=9r_P7Wc-c2cAX8Dm_s2&_nc_ht=scontent.ftlv1-2.fna&oh=e71d355d78c765711570abe73b7f1ccd&oe=5EF83FE2" alt="Bambi Haber">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Bambi Haber</h3>
+              <time class="chats-item-time">Sunday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">This is awesome!</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t31.0-1/p480x480/19693620_10155490124643377_7681015883106028225_o.jpg?_nc_cat=101&_nc_sid=7206a8&_nc_ohc=rCDyj2YlBTMAX-XWZBg&_nc_ht=scontent.ftlv1-1.fna&_nc_tp=6&oh=afadddfcf130358025985597b9d68cf4&oe=5EF7D029" alt="Alexey Karash">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Alexey Karash</h3>
+              <time class="chats-item-time">Sunday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Whats up?</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.ftlv1-2.fna.fbcdn.net/v/t1.0-1/c39.0.293.293a/61548973_10216380217710345_2070201909146288128_n.jpg?_nc_cat=103&_nc_sid=7206a8&_nc_ohc=pf7EiIN0TOcAX-LOpBw&_nc_ht=scontent.ftlv1-2.fna&oh=2b68b7b82e2115ba9b9c621bb8b0a6ba&oe=5EF8135C" alt="Ofer Shelly">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Ofer Shelly</h3>
+              <time class="chats-item-time">Saturday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">It was a great talk</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.0-1/p240x240/90769650_10216328789027525_1768456314591117312_n.jpg?_nc_cat=106&_nc_sid=7206a8&_nc_ohc=fjJvGGteAKYAX9k6im5&_nc_ht=scontent.fhfa1-1.fna&_nc_tp=6&oh=e14fad9bc5b2592409d9d4af1c06740f&oe=5EEAC512" alt="Moshe Harush">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Moshe Harush</h3>
+              <time class="chats-item-time">Friday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Open for freelance?</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="chats-item">
+          <div class="chats-item-button js-chat-button" role="button" tabindex="0">
+            <img class="profile-image" src="https://scontent.fhfa1-2.fna.fbcdn.net/v/t1.0-1/p240x240/75456831_2576866162543789_1837376370594807808_o.jpg?_nc_cat=100&_nc_sid=7206a8&_nc_ohc=yJMv0hFAm04AX-e7PZh&_nc_ht=scontent.fhfa1-2.fna&_nc_tp=6&oh=a3cd6b3f25e25fd47e4d211d4fda2ea6&oe=5EE87E2B" alt="Guy Sarkinsky">
+            <header class="chats-item-header">
+              <h3 class="chats-item-title">Guy Sarkinsky</h3>
+              <time class="chats-item-time">Friday</time>
+            </header>
+            <div class="chats-item-content">
+              <p class="chats-item-last">Thanks a lot!</p>
+              <ul class="chats-item-info">
+                <li class="chats-item-info-item u-hide"><span class="icon-silent">🔇</span></li>
+                <li class="chats-item-info-item"><span class="unread-messsages"></span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </aside>  
+  <main class="main-content">
+    <header class="common-header">
+       <div class="common-header-start">  
+         <button class="common-button is-only-mobile u-margin-end js-back"><span class="icon icon-back">⬅</span></button>
+         <button class="u-flex js-side-info-button">
+             <img class="profile-image" src="https://scontent.fhfa1-2.fna.fbcdn.net/v/t1.0-1/p100x100/10325799_276849335820343_269039155920934591_n.png?_nc_cat=101&_nc_sid=dbb9e7&_nc_ohc=fxci6qYcSvoAX-bZfj2&_nc_ht=scontent.fhfa1-2.fna&oh=ad1c246e7e4a52c607aafd99ed7217a2&oe=5EEAF8B0" alt="CSS Masters Israel">
+             <div class="common-header-content">
+               <h2 class="common-header-title">CSS Masters Israel</h2>
+               <p class="common-header-status">Online</p>
+             </div>
+           </button>       
+       </div>
+       <nav class="common-nav">
+           <ul class="common-nav-list">
+             <li class="common-nav-item">
+               <button class="common-button">
+                 <span class="icon">🔎</span>
+               </button>
+             </li>
+             <li class="common-nav-item">
+               <button class="common-button">
+                 <span class="icon icon-attach">📎</span>
+               </button>
+             </li>
+             <li class="common-nav-item">
+               <button class="common-button u-animation-click js-side-info-button">
+                 <span class="icon icon-menu" aria-label="menu"></span>
+               </button>
+             </li>
+           </ul>
+         </nav>
+     </header>
+    <div class="messanger">
+      <ol class="messanger-list">
+        <li class="common-message is-time">
+          <p class="common-message-content">
+            Today
+          </p>          
+        </li>
+        <li class="common-message is-you">
+          <p class="common-message-content">
+            This is my CSS/HTML Revers Engineering for WhatsApp
+          </p>
+          <span class="status is-seen">✔️✔️</span>
+          <time datetime>14:11</time>
+        </li>
+        <li class="common-message is-you">
+          <p class="common-message-content">
+            Just take a look
+          </p>
+          <span class="status is-seen">✔️✔️</span>
+          <time datetime>14:12</time>
+        </li> 
+        <li class="common-message is-other">        
+          <p class="common-message-content">
+            Who are you?
+          </p>
+          <time datetime>14:33</time>          
+        </li>
+        <li class="common-message is-you">        
+          <p class="common-message-content">            
+            I’m Elad Shechter, a Web Developer specializing in CSS & HTML design and architecture.<br><br>
+
+A bit more about myself:<br>
+- Writer of various globally known CSS articles<br>
+- CSS speaker.<br>
+- Founder of CSS Masters Israel Community<br><br>
+
+            You can see more of my stuff on my website <a href="https://eladsc.com/" tarhet="_blank">eladsc.com</a>
+        
+          </p>
+          <span class="status is-seen">✔️✔️</span>
+          <time datetime>14:41</time>
+        </li>
+        <li class="common-message is-other">        
+          <p class="common-message-content">
+            Who's those peoples on the contact list?
+          </p>
+          <time datetime>14:33</time>          
+        </li>
+        <li class="common-message is-you">        
+          <p class="common-message-content">
+            These are friends from our comunity "<a href="https://www.facebook.com/groups/css.masters.israel/" target="_blank">CSS Masters Israel</a>".<br>
+            Beside it we have anoather global comunity channel, called" <a href="https://www.facebook.com/groups/css.master/" target="_blank">CSS Masters</a>", if you love CSS, you are all welcome to join.
+          </p>
+           <span class="status">✔️✔️</span>
+          <time datetime>14:34</time>
+        </li>
+        <li class="common-message is-you">        
+          <p class="common-message-content">
+            If you want to know how I created reverse engineering to WhatsApp web, you can read my article 
+            <a href="https://blog.animaapp.com/reverse-engineering-whatsapp-webs-css-9239293009f4?utm_medium=blog&utm_source=elad-css&utm_content=reverse-whatsapp&utm_campaign=css-reverse" target="_blank">"Reverse Engineering WhatsApp Web's CSS"</a>
+          </p>
+          <span class="status">✔️</span>
+          <time datetime>14:43</time>
+        </li>
+        <li class="common-message is-you">        
+          <p class="common-message-content">
+            Beside it you can follow me on twitter:<br>
+            <a class="twitter" href="https://twitter.com/eladsc"><span class="twitter-user">@eladsc</span></a>
+          </p>
+          <span class="status">✔️</span>
+          <time datetime>14:43</time>
+        </li>
+    </ol>
+    </div>    
+    <div class="message-box">
+      <button class="common-button"><span class="icon">😃</span></button>
+      <div class="text-input" id="message-box" placeholder="Type a message" contenteditable></div>
+      <button id="voice-button" class="common-button"><span class="icon">🎤</span></button>
+      <button id="submit-button" class="common-button"><span class="icon">➤</span></button>
+    </div>  
+  </main>
+  <aside class="main-info u-hide">    
+      <header class="common-header">
+        <button class="common-button js-close-main-info"><span class="icon">❌</span></button>
+        <div class="common-header-content">
+          <h3 class="common-header-title">Info</h3>
+        </div>
+      </header>
+      <div class="main-info-content">
+        <section class="common-box">
+          <img class="main-info-image" src="https://scontent.fhfa1-2.fna.fbcdn.net/v/t1.0-1/p100x100/10325799_276849335820343_269039155920934591_n.png?_nc_cat=101&_nc_sid=dbb9e7&_nc_ohc=fxci6qYcSvoAX-bZfj2&_nc_ht=scontent.fhfa1-2.fna&oh=ad1c246e7e4a52c607aafd99ed7217a2&oe=5EEAF8B0" alt="CSS Masters Israel">
+          <h4 class="big-title">CSS Masters Israel</h4>
+          <p class="info-text">Created 6/11/2013 at 22:45</p>
+        </section>
+        <section class="common-box">
+          <h5 class="section-title">Description</h5>
+          <p>Out main channel of the comunity is on Fecbook: <a href="https://www.facebook.com/groups/css.masters.israel/">http://bit.ly/2Up8On5</a></p>
+        </section>
+        <section class="common-box">
+          <h5 class="section-title">Other content</h5>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto odit voluptatem magnam sequi dolorem soluta assumenda ipsum iusto culpa velit repudiandae vitae minus minima corporis labore sit, molestias, a ut!</p>
+        </section>
+    </div>
+  </aside>
+</section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
