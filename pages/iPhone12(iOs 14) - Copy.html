@@ -409,5 +409,16 @@
     </div>
   </div>
 </section>
+<script>
+      var iphoneMock = document.querySelector('.iphoneMock');
+
+      iphoneMock.addEventListener('touchstart', function() {
+        alert('Touch event started');
+      });
+
+      iphoneMock.addEventListener('touchend', function() {
+        alert('Touch event ended');
+      });
+    </script>
   </body>
 </html>
