@@ -193,7 +193,7 @@ $(function(){
       },
       {
         name: 'Minigame',
-        icon: '../Icons/game.png',
+        icon: '../Icons/Game.png',
         notifications: 0,
         type: 'app',
         dynamic: false
@@ -242,59 +242,67 @@ $(function(){
     draggScreen: false
   }
   //Extended Functions
-$.fn.extend({
-  touchMov: function(config){
-    config = jQuery.extend({
-      mov: 'x',
-      movLeft: function(){},
-      movRight: function(){},
-      movUp: function(){},
-      movDown: function(){},
-      updateMovX: function(){},
-      updateMovY: function(){},
-      finishMov: function(){}
-    }, config);
-    let el = this;
-    let initCoords = { x: 0, y: 0 };
-    let movCoords = { x: 0, y: 0 };
-    let downCoords = { x: 0, y: 0 };
-
-    function handleStart(e) {
-      initCoords = { x: e.pageX, y: e.pageY };
-      downCoords = { x: movCoords.x, y: movCoords.y };
-    }
-
-    function handleMove(e) {
-      globalState.draggScreen = true;
-      movCoords = { x: e.pageX, y: e.pageY };
-      if (config.mov === 'x') {
-        config.updateMovX(e, (movCoords.x - initCoords.x))
-      } else if (config.mov === 'y') {
-        config.updateMovY(e, (movCoords.y - initCoords.y))
-      }
-    }
-
-    function handleEnd(e) {
-      if (config.mov === 'x') {
-        if (movCoords.x - downCoords.x != 0) {
-          (movCoords.x - initCoords.x) > 0 ? config.movRight(e) : config.movLeft(e);
-        }
-      } else if (config.mov === 'y') {
-        if (movCoords.y - downCoords.y != 0) {
-          (movCoords.y - initCoords.y) > 0 ? config.movDown(e) : config.movUp(e);
-        }
-      }
-      globalState.draggScreen = false;
-      config.finishMov(e);
-      el.off('mousemove touchmove');
-      el.off('mouseup touchend');
-      el.off('mouseleave touchcancel');
-    }
-
-    el.on('mousedown touchstart', handleStart);
-    el.on('mousemove touchmove', handleMove);
-    el.on('mouseup touchend', handleEnd);
-    el.on('mouseleave touchcancel', handleEnd);
+  $.fn.extend({
+    touchMov: function(config){
+      config = jQuery.extend({
+        mov: 'x',
+        movLeft: function(){},
+        movRight: function(){},
+        movUp: function(){},
+        movDown: function(){},
+        updateMovX: function(){},
+        updateMovY: function(){},
+        finishMov: function(){}
+      }, config);
+      let el = this;
+      let initCoords = { x: 0, y: 0 };
+      let movCoords = { x: 0, y: 0 };
+      let downCoords = { x: 0, y: 0 };
+      el.mousedown(function (e) {
+        initCoords = { x: e.pageX, y: e.pageY };
+        downCoords = { x: movCoords.x, y: movCoords.y };
+        el.mousemove(function (e2) {
+          globalState.draggScreen = true;
+          movCoords = { x: e2.pageX, y: e2.pageY };
+          if (config.mov === 'x') {
+            config.updateMovX(e2, (movCoords.x - initCoords.x))
+          } else if (config.mov === 'y') {
+            config.updateMovY(e2, (movCoords.y - initCoords.y))
+          }
+        })
+        el.mouseup(function (ex) {
+          if (config.mov === 'x') {
+            if (movCoords.x - downCoords.x != 0) {
+              (movCoords.x - initCoords.x) > 0 ? config.movRight(ex) : config.movLeft(ex);
+            }
+          } else if (config.mov === 'y') {
+            if (movCoords.y - downCoords.y != 0) {
+              (movCoords.y - initCoords.y) > 0 ? config.movDown(ex) : config.movUp(ex);
+            }
+          }
+          globalState.draggScreen = false;
+          config.finishMov(ex);
+          el.off('mousemove');
+          el.off('mouseup');
+          el.off('mouseleave');
+        })
+        el.mouseleave(function (a) {
+          if (config.mov === 'x') {
+            if (movCoords.x - downCoords.x != 0) {
+              (movCoords.x - initCoords.x) > 0 ? config.movRight(a) : config.movLeft(a);
+            }
+          } else if (config.mov === 'y') {
+            if (movCoords.y - downCoords.y != 0) {
+              (movCoords.y - initCoords.y) > 0 ? config.movDown(a) : config.movUp(a);
+            }
+          }
+          globalState.draggScreen = false;
+          config.finishMov(a);
+          el.off('mousemove');
+          el.off('mouseup');
+          el.off('mouseleave');
+        })
+      })
       return this;
     },
     calendar: function(config){
